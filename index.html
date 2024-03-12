@@ -10,19 +10,19 @@
 <body>
 <main>
   <h1>Task manager - js</h1>
-  <div class="task-mgr">
-    <div class="task-mgr__task-box">
+  <div class="task-mgr container">
+    <div class="task-mgr__tasks-box container">
       <h2>Tasks</h2>
       <ul class="task-mgr__list">
       </ul>
     </div>
-    <div class="task-mgr__add-task">
+    <div class="task-mgr__add-task container">
       <h2>add task</h2>
       <label for="title">
-        <input type="text" name="title" id="task-title" class="task-title">
+        <input type="text" name="title" id="task-title" class="task-mgr__field">
       </label>
       <label for="description">
-        <input type="text" name="description" id="task-description">
+        <input type="text" name="description" id="task-description" class="task-mgr__field">
       </label>
       <br>
       <br>
@@ -30,6 +30,10 @@
     </div>
   </div>
 </main>
+<template id="task-tmpl">
+  <p class="task-title"></p>
+  <p class="task-description"></p>
+</template>
 <script src='app.js'></script>
 </body>
 </html>

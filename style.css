@@ -12,20 +12,20 @@ li {
   gap: 10px;
 }
 
-.task-mgr__task-box {
+.task-mgr__tasks-box {
   width: 60%;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  padding: 10px;
 }
 
 .task-mgr__add-task {
   width: 40%;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  padding: 10px;
 }
 
 .task-mgr-btn {
   width: 100%;
+}
+
+.container {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 10px;
 }
