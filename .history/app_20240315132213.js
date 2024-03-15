@@ -31,4 +31,15 @@ function renderTask (task) {
   const taskElement = document.createDocumentFragment();
   taskElement.append(task);
   taskTitle.append(taskElement);
+  // elem.querySelector('.btn__remove').addEventListener('click', function() {
+  //   elem.remove();
+  // })
 }
+
+// function addTask (element) {
+//   const task = document.createElement('li')
+//   task.innerHTML = `
+//     <span>${taskTitleField.value}<span>
+//     <span>${taskDescriptionField.value}<span>`;
+//   tasksList.appendChild(task)
+// }

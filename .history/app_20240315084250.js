@@ -3,6 +3,7 @@ const taskDescriptionField = document.querySelector('#task-description');
 const buttonAdd = document.querySelector('#btn-add');
 const taskTitle = document.querySelector('.task-mgr__list');
 const taskTemplate = document.querySelector('#task-tmpl').content;
+const buttonRemove = btn__remove
 
 buttonAdd.addEventListener('click', function () {
   if (taskTitleField.value && taskDescriptionField.value) {
@@ -17,18 +18,28 @@ function clear(){
   taskDescriptionField.value='';
 };
 
+
 function createTask (name, description) {
   const task = taskTemplate.cloneNode(true);
   task.querySelector('.task-title').textContent = name;
   task.querySelector('.task-description').textContent = description;
-  task.querySelector('.btn__remove').addEventListener('click', function(){
-    this.closest('LI').remove();
-  });
+  task.querySelector('.btn__remove').addEventListener('click', function(elem) {
+    this.remove();
+  })
   renderTask(task)
 }
 
-function renderTask (task) {
+function renderTask (elem) {
   const taskElement = document.createDocumentFragment();
-  taskElement.append(task);
+  taskElement.append(elem);
+  console.log(taskElement);
   taskTitle.append(taskElement);
 }
+
+// function addTask (element) {
+//   const task = document.createElement('li')
+//   task.innerHTML = `
+//     <span>${taskTitleField.value}<span>
+//     <span>${taskDescriptionField.value}<span>`;
+//   tasksList.appendChild(task)
+// }

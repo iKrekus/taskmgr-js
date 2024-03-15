@@ -16,10 +16,8 @@ body {
 .task-mgr__list li {
   box-shadow: 0 0 10px -5px #ffffff;
   border-radius: 4px;
-  padding: 4px 6px;
+  padding: 5px 10px;
   position: relative;
-  margin-bottom: 16px;
-  transition: all .4s ease-in-out;
 }
 
 .task-mgr__list p{
@@ -52,13 +50,6 @@ body {
 .task-mgr__field {
   width: 100%;
   padding: 1px 5px;
-  border-radius: 4px;
-  border: none;
-}
-
-.task-mgr__field:focus {
-  box-shadow: 0 0 0 1px #ff0037;
-  outline: none;
 }
 
 .task-mgr-btn {
@@ -71,20 +62,6 @@ body {
   padding: 10px;
 }
 
-.task-title {
-  font-size: 1.2em;
-  color: #ff0037;
-  background-color: #222222;
-  padding: 0 5px;
-  border-radius: 4px 4px 0 0;
-}
-
-.task-description {
-  background-color: #444444;
-  padding: 0 5px;
-  border-radius: 0 0 4px 4px;
-}
-
 .btn {
   background: none;
   border: 1px solid #ffffff;
@@ -93,35 +70,18 @@ body {
   color: #ffffff;
 }
 
-.btn {
-  transition: all .2s ease-in-out;
-}
-
 .btn:hover,
 .btn:focus {
   cursor: pointer;
-  transition: all .2s ease-in-out;
 }
-
-.btn__add:active {
-  transform: scale(0.99);
-  transition: all .1s ease-in-out;
-}
-
-.btn__add:hover {
-  color: #ff0037;
-  border-color: #ff0037;
-} 
 
 .btn__remove {
   position: absolute;
   content: "";
-  top: -8px;
-  right: -6px;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  transition: all .3s ease-in-out;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -134,7 +94,6 @@ body {
   height: 1px;
   width: 10px;
   background-color: #ffffff;
-  transition: all .2s ease-in-out
 }
 
 .btn__remove::after {
@@ -146,26 +105,15 @@ body {
   height: 1px;
   width: 10px;
   background-color: #ffffff;
-  transition: all .2s ease;
 }
 
-.btn__remove:hover::before {
-  transform: translate(-50%, -50%) rotate(180deg);
-  transition: all .2s ease;
+.btn__remove::before:hover {
+  transform: rotate(45deg);
+  transition: all .8s ease-in-out;
 }
 
 
-.btn__remove:hover::after {
-  transform: translate(-50%, -50%) rotate(180deg);
-  transition: all .2s ease;
-}
-
-.task-mgr__list li:has(.btn__remove:hover) {
-  transform: translateY(-3px);
-  transition: all .2s ease;
-}
-
-.btn__remove:hover {
-  transform: translateY(8px);
-  transition: all .3s ease;
+.btn__remove::after:hover { 
+  transform: rotate(-45deg);
+  transition: all .8s ease-in-out;
 }

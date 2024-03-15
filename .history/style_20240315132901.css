@@ -1,0 +1,35 @@
+.task-mgr {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-mgr__container {
+  display: flex;
+  gap: 10px;
+}
+
+.task-mgr__tasks-box {
+  width: 60%;
+}
+
+.task-mgr__add-task {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-mgr-btn {
+  width: 100%;
+}
+
+.container {
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 10px;
+}

@@ -8,9 +8,9 @@
   <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
-<main class="task-mgr">
+<main>
   <h1>Task manager - js</h1>
-  <div class="task-mgr__container container">
+  <div class="task-mgr container">
     <div class="task-mgr__tasks-box container">
       <h2>Tasks</h2>
       <ul class="task-mgr__list">
@@ -24,7 +24,9 @@
       <label for="description">
         <input type="text" name="description" id="task-description" class="task-mgr__field">
       </label>
-      <button type="button" class="btn btn__add" id="btn-add">add</button>
+      <br>
+      <br>
+      <button type="button" class="task-mgr-btn task-mgr-btn__add" id="btn-add">add</button>
     </div>
   </div>
 </main>
@@ -32,7 +34,7 @@
   <li>
   <p class="task-title"></p>
   <p class="task-description"></p>
-  <button type="button" class="btn btn__remove"></button>
+  <button type="button">Clear</button>
   </li>
 </template>
 <script src='app.js'></script>

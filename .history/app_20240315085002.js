@@ -17,18 +17,28 @@ function clear(){
   taskDescriptionField.value='';
 };
 
+
 function createTask (name, description) {
   const task = taskTemplate.cloneNode(true);
   task.querySelector('.task-title').textContent = name;
   task.querySelector('.task-description').textContent = description;
-  task.querySelector('.btn__remove').addEventListener('click', function(){
-    this.closest('LI').remove();
-  });
   renderTask(task)
 }
 
-function renderTask (task) {
+function renderTask (elem) {
   const taskElement = document.createDocumentFragment();
-  taskElement.append(task);
+  taskElement.append(elem);
+
   taskTitle.append(taskElement);
+  taskElement.querySelector('.btn__remove').addEventListener('click', function() {
+    taskElement.remove();
+  })
 }
+
+// function addTask (element) {
+//   const task = document.createElement('li')
+//   task.innerHTML = `
+//     <span>${taskTitleField.value}<span>
+//     <span>${taskDescriptionField.value}<span>`;
+//   tasksList.appendChild(task)
+// }

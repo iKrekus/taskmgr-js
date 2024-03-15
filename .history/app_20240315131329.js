@@ -21,9 +21,7 @@ function createTask (name, description) {
   const task = taskTemplate.cloneNode(true);
   task.querySelector('.task-title').textContent = name;
   task.querySelector('.task-description').textContent = description;
-  task.querySelector('.btn__remove').addEventListener('click', function(){
-    this.closest('LI').remove();
-  });
+  console.log(task);
   renderTask(task)
 }
 
@@ -31,4 +29,15 @@ function renderTask (task) {
   const taskElement = document.createDocumentFragment();
   taskElement.append(task);
   taskTitle.append(taskElement);
+  // elem.querySelector('.btn__remove').addEventListener('click', function() {
+  //   elem.remove();
+  // })
 }
+
+// function addTask (element) {
+//   const task = document.createElement('li')
+//   task.innerHTML = `
+//     <span>${taskTitleField.value}<span>
+//     <span>${taskDescriptionField.value}<span>`;
+//   tasksList.appendChild(task)
+// }
