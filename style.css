@@ -1,3 +1,15 @@
+html {
+  -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+      box-sizing: inherit;
+}
+
 body {
   background-color: #111111;
   color: #ffffff;
@@ -48,10 +60,10 @@ body {
 
 }
 
-.task-mgr__add-task label {
+/* .task-mgr__add-task label {
   display: flex;
   flex-direction: row;
-}
+} */
 
  
 .task-mgr__field {
@@ -59,11 +71,17 @@ body {
   padding: 1px 5px;
   border-radius: 4px;
   border: none;
+  flex: 1 1 100%;
 }
 
 .task-mgr__field:focus {
   box-shadow: 0 0 0 1px #ff0037;
   outline: none;
+}
+
+.task-mgr__field--date,
+.task-mgr__field--temperature {
+  flex: 1;
 }
 
 .task-mgr-btn {
@@ -176,3 +194,11 @@ body {
   transform: translateY(4px);
   transition: all .3s ease;
 }
+
+.task-mgr__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+

@@ -19,21 +19,17 @@
     </div>
     <div class="task-mgr__add-task container">
       <h2>add tasks</h2>
-      <div>
-        <label for="date">
-          <input type="date" name="date" id="task-date" class="task-mgr__field">
-        </label>
-        <label for="temperature">
-          <input type="number" name="temperature" id="task-temperature" class="task-mgr__field" min="-100" max="100" value="0" maxlength="4">
-        </label>
+      <div class="task-mgr__wrap">
+        <!-- <label for="date"></label> -->
+        <input type="date" name="date" id="task-date" class="task-mgr__field task-mgr__field--date">
+        <!-- <label for="temperature"></label> -->
+        <input type="number" name="temperature" id="task-temperature" class="task-mgr__field task-mgr__field--temperature" min="-100" max="100" value="0" maxlength="4">
       </div>
-      <div>
-        <label for="title">
-          <input type="text" name="title" id="task-title" class="task-mgr__field">
-        </label>
-        <label for="description">
-          <input type="text" name="description" id="task-description" class="task-mgr__field">
-        </label>
+      <div class="task-mgr__wrap">
+        <label for="title"></label>
+        <input type="text" name="title" id="task-title" class="task-mgr__field task-mgr__field--title">
+        <label for="description"></label>
+        <input type="text" name="description" id="task-description" class="task-mgr__field task-mgr__field--description">
       </div>
       <button type="button" class="btn btn__add" id="btn-add">add</button>
     </div>
