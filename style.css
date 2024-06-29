@@ -26,6 +26,11 @@ body {
   margin: 0;
 }
 
+/* .task-mgr__list li:has(.btn__remove:hover) p{
+  transform: scaleY(0.1);
+  transition: all .2s ease;
+} */
+
 .task-mgr__container {
   display: flex;
   gap: 10px;
@@ -163,9 +168,11 @@ body {
 .task-mgr__list li:has(.btn__remove:hover) {
   transform: translateY(-3px);
   transition: all .2s ease;
+  opacity: 0.5;
+  /* max-height: 3px; */
 }
 
 .btn__remove:hover {
-  transform: translateY(8px);
+  transform: translateY(4px);
   transition: all .3s ease;
 }

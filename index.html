@@ -8,6 +8,7 @@
   <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
+  <button id="clrStorage" onclick="localStorage.clear()">clrStorage</button>
 <main class="task-mgr">
   <h1>Task manager - js</h1>
   <div class="task-mgr__container container">
@@ -18,18 +19,32 @@
     </div>
     <div class="task-mgr__add-task container">
       <h2>add tasks</h2>
-      <label for="title">
-        <input type="text" name="title" id="task-title" class="task-mgr__field">
-      </label>
-      <label for="description">
-        <input type="text" name="description" id="task-description" class="task-mgr__field">
-      </label>
+      <div>
+        <label for="date">
+          <input type="date" name="date" id="task-date" class="task-mgr__field">
+        </label>
+        <label for="temperature">
+          <input type="number" name="temperature" id="task-temperature" class="task-mgr__field" min="-100" max="100" value="0" maxlength="4">
+        </label>
+      </div>
+      <div>
+        <label for="title">
+          <input type="text" name="title" id="task-title" class="task-mgr__field">
+        </label>
+        <label for="description">
+          <input type="text" name="description" id="task-description" class="task-mgr__field">
+        </label>
+      </div>
       <button type="button" class="btn btn__add" id="btn-add">add</button>
     </div>
   </div>
 </main>
 <template id="task-tmpl">
   <li>
+  <div>
+    <p class="task-date"></p>
+    <p class="task-temperature"></p>
+  </div>
   <p class="task-title"></p>
   <p class="task-description"></p>
   <button type="button" class="btn btn__remove"></button>
